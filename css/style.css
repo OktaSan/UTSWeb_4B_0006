@@ -1,7 +1,7 @@
 :root {
     --bg-main: #EEEEEE;
     --color-mint: #6FCF97;
-    --color-emerlad: #2FA084;
+    --color-emerald: #2FA084;
     --color-dark: #1F6F5F;
 }
 
@@ -26,11 +26,11 @@ h1, h2 {
 }
 
 .text-emerald {
-    columns: var(--color-emerlad);
+    color: var(--color-emerald);
 }
 
 .btn-custom {
-    background-color: var(--color-emerlad);
+    background-color: var(--color-emerald);
     color: white;
     border: none;
     padding: 10px 25px;
@@ -49,4 +49,16 @@ h1, h2 {
 
 .service-card:hover {
     transform: translateY(-10px);
+}
+
+.filter-btn {
+    border-radius: 0;
+    border: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    border-bottom: 2px solid var(--color-mint);
+    color: var(--color-emerald);
 }
