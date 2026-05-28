@@ -62,3 +62,7 @@ h1, h2 {
     border-bottom: 2px solid var(--color-mint);
     color: var(--color-emerald);
 }
+
+.bg-emerald {
+    background-color: var(--color-emerald) !important;
+}
