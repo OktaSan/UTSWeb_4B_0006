@@ -20,3 +20,33 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     })
 })
+
+const counters = document.querySelectorAll(".counter")
+const speed = 200;
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const counter = entry.target
+
+            const updateCount = () => {
+                const target = +counter.getAttribute("data-target")
+                const count = +counter.innerText
+                const increment = target / speed
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment)
+                    setTimeout(updateCount, 15)
+                } else {
+                    counter.innerText = target
+                }
+            }
+            updateCount()
+            observer.unobserve(counter)
+        }
+    })
+}, { threshold: 0.5 })
+
+counters.forEach(counters => {
+    observer.observe(counters)
+})
