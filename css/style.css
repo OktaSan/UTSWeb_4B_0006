@@ -19,3 +19,24 @@ body {
     color: var(--color-dark);
     font-weight: bold;
 }
+
+h1, h2 {
+    font-weight: 800;
+    color: var(--color-dark);
+}
+
+.text-emerald {
+    columns: var(--color-emerlad);
+}
+
+.btn-custom {
+    background-color: var(--color-emerlad);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+}
+
+.btn-custom:hover {
+    background-color: var(--color-dark);
+    color: white;
+}
