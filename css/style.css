@@ -1,0 +1,21 @@
+:root {
+    --bg-main: #EEEEEE;
+    --color-mint: #6FCF97;
+    --color-emerlad: #2FA084;
+    --color-dark: #1F6F5F;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--color-dark);
+}
+
+.custom-navbar {
+    background-color: var(--bg-main);
+    border-bottom: 2px solid var(--color-mint);
+}
+
+.nav-link {
+    color: var(--color-dark);
+    font-weight: bold;
+}
