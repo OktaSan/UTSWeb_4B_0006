@@ -50,3 +50,31 @@ const observer = new IntersectionObserver((entries, observer) => {
 counters.forEach(counters => {
     observer.observe(counters)
 })
+
+let kalkulasiBtn = document.getElementById('calculate-btn')
+let areaInput = document.getElementById("area-input")
+let packageInput = document.getElementById("package-input")
+let resultBox = document.getElementById("result-box")
+let totalPriceBox = document.getElementById("total-price")
+
+if (kalkulasiBtn) {
+    kalkulasiBtn.addEventListener("click", () => {
+        const areanilai = parseFloat(areaInput.value)
+        const packagePrice = parseFloat(packageInput.value)
+
+        if (isNaN(areanilai) || areanilai <= 0) {
+            alert("Harap masukkan luas ruang yang valid.")
+            return
+        }
+        const total = areanilai * packagePrice
+
+        const formatTotal = new Intl.NumberFormat('id-ID', {
+            style: 'currency',
+            currency: 'IDR',
+            minimumFractionDigits: 0
+        }).format(total);
+
+        totalPriceBox.innerHTML = formatTotal
+        resultBox.classList.remove("d-none")
+    })
+}
