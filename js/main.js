@@ -107,3 +107,19 @@ if(contractForm) {
         }
     })
 }
+
+let scrollTopBtn = document.getElementById("scrollTopBtn")
+
+if(scrollTopBtn) {
+    window.addEventListener("scroll", () => {
+        if(window.scrollY > 300) {
+            scrollTopBtn.classList.remove("d-none")
+        } else {
+            scrollTopBtn.classList.add("d-none")
+        }
+    })
+
+    scrollTopBtn.addEventListener("click", () => [
+        window.scrollTo({top: 0, behavior: "smooth"})
+    ])
+}
