@@ -82,7 +82,7 @@ if (kalkulasiBtn) {
 let contractForm = document.getElementById("contact-form")
 let alertBox = document.getElementById("form-alert")
 
-if(contractForm) {
+if (contractForm) {
     contractForm.addEventListener("submit", (e) => {
         e.preventDefault()
 
@@ -92,7 +92,7 @@ if(contractForm) {
 
         alertBox.classList.remove("d-none", "alert-success", "alert-danger")
 
-        if(nama === "" || email === "" || pesan === "") {
+        if (nama === "" || email === "" || pesan === "") {
             alertBox.classList.add("alert-danger")
             alertBox.innerHTML = "lengkapi seluruh field (Nama, Email, dan Pesan)."
         } else {
@@ -110,18 +110,18 @@ if(contractForm) {
 
 let scrollTopBtn = document.getElementById("scrollTopBtn")
 
-if(scrollTopBtn) {
+if (scrollTopBtn) {
     window.addEventListener("scroll", () => {
-        if(window.scrollY > 300) {
+        if (window.scrollY > 300) {
             scrollTopBtn.classList.remove("d-none")
         } else {
             scrollTopBtn.classList.add("d-none")
         }
     })
 
-    scrollTopBtn.addEventListener("click", () => [
-        window.scrollTo({top: 0, behavior: "smooth"})
-    ])
+    scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    })
 }
 
 let sections = document.querySelectorAll("section")
@@ -131,14 +131,14 @@ window.addEventListener("scroll", () => {
     let curren = ""
     sections.forEach(section => {
         const sectionTop = section.offsetTop
-        if(window.scrollY >= (sectionTop - 100)) {
+        if (window.scrollY >= (sectionTop - 100)) {
             curren = section.getAttribute("id")
         }
     })
     navLinks.forEach(link => {
         link.classList.remove("active")
-        if(link.getAttribute("href").includes(curren)) {
+        if (link.getAttribute("href").includes(curren)) {
             link.classList.add("active")
         }
-    }) 
+    })
 })
