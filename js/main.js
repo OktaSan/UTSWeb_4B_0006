@@ -78,3 +78,32 @@ if (kalkulasiBtn) {
         resultBox.classList.remove("d-none")
     })
 }
+
+let contractForm = document.getElementById("contct-form")
+let alertBox = document.getElementById("form-alert")
+
+if(contractForm) {
+    contractForm.addEventListener("submit", (e) => {
+        e.preventDefault()
+
+        const nama = document.getElementById("name-input").value.trim()
+        const email = document.getElementById("email-input").value.trim()
+        const pesan = document.getElementById("message-input").value.trim()
+
+        alertBox.classList.remove("d-none", "alert-success", "alert-danger")
+
+        if(nama === "" || email === "" || pesan === "") {
+            alertBox.classList.add("alert-danger")
+            alertBox.innerHTML = "lengkapi seluruh field (Nama, Email, dan Pesan)."
+        } else {
+            alertBox.classList.add("alert-success")
+            alertBox.innerHTML = `Terima kasih, ${name}! Pesan Anda telah kami terima.`;
+
+            contractForm.reset()
+
+            setTimeout(() => {
+                alertBox.classList.add("d-none")
+            }, 4000)
+        }
+    })
+}
