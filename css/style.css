@@ -75,3 +75,18 @@ h1, h2 {
 .form-control, .form-select {
     border-radius: 0;
 }
+
+@media (max-width: 760px) {
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    .display-4 {
+        font-size: 2.4rem;
+    }
+    #hero {
+        text-align: center;
+    }
+    .custom-navbar {
+        padding: 10px 0;
+    }
+}
