@@ -79,7 +79,7 @@ if (kalkulasiBtn) {
     })
 }
 
-let contractForm = document.getElementById("contct-form")
+let contractForm = document.getElementById("contact-form")
 let alertBox = document.getElementById("form-alert")
 
 if(contractForm) {
@@ -97,7 +97,7 @@ if(contractForm) {
             alertBox.innerHTML = "lengkapi seluruh field (Nama, Email, dan Pesan)."
         } else {
             alertBox.classList.add("alert-success")
-            alertBox.innerHTML = `Terima kasih, ${name}! Pesan Anda telah kami terima.`;
+            alertBox.innerHTML = `Terima kasih, ${nama}! Pesan Anda telah kami terima.`;
 
             contractForm.reset()
 
