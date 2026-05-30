@@ -66,3 +66,12 @@ h1, h2 {
 .bg-emerald {
     background-color: var(--color-emerald) !important;
 }
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--color-mint);
+    box-shadow: 0 0 0 0.25rem rgba(111, 207, 151, 0.25);
+}
+
+.form-control, .form-select {
+    border-radius: 0;
+}
