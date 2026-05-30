@@ -90,3 +90,8 @@ h1, h2 {
         padding: 10px 0;
     }
 }
+
+.nav-link.active {
+    color: var(--color-emerald) !important;
+    font-weight: 700;
+}

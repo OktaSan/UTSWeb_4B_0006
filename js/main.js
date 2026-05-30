@@ -123,3 +123,22 @@ if(scrollTopBtn) {
         window.scrollTo({top: 0, behavior: "smooth"})
     ])
 }
+
+let sections = document.querySelectorAll("section")
+let navLinks = document.querySelectorAll(".nav-link")
+
+window.addEventListener("scroll", () => {
+    let curren = ""
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop
+        if(window.scrollY >= (sectionTop - 100)) {
+            curren = section.getAttribute("id")
+        }
+    })
+    navLinks.forEach(link => {
+        link.classList.remove("active")
+        if(link.getAttribute("href").includes(curren)) {
+            link.classList.add("active")
+        }
+    }) 
+})
